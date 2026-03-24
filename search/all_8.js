@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['sensor_5finput_0',['SENSOR_INPUT',['../d1/dd7/lab1_8ino.html#af7495a159383a976e6fd0791864fa63e',1,'lab1.ino']]],
-  ['setup_1',['setup',['../d1/dd7/lab1_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'lab1.ino']]]
+  ['prekida_0',['Prioriteti prekida',['../index.html#priority',1,'']]],
+  ['prekidi_1',['Prekidi',['../index.html#interrupts',1,'']]],
+  ['prekidi_20u_20ugradbenim_20sustavima_2',['Lab1 – Prekidi u ugradbenim sustavima',['../index.html',1,'']]],
+  ['prioriteti_20isr_3',['Led Prioriteti ISR',['../index.html#led',1,'']]],
+  ['prioriteti_20prekida_4',['Prioriteti prekida',['../index.html#priority',1,'']]],
+  ['program_5',['Main program',['../index.html#main',1,'']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RUS_Lab1_Prekidi: Main Page</title>
+<title>RUS_Lab1_Prekidi: Lab1 – Prekidi u ugradbenim sustavima</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,10 +89,56 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">RUS_Lab1_Prekidi Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Lab1 – Prekidi u ugradbenim sustavima </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><h1><a class="anchor" id="intro"></a>
+Uvod</h1>
+<p>Ovaj projekt demonstrira rad s višestrukim prekidima na mikrokontroleru. Implementirani su različiti izvori prekida (tipkala, timer i senzor) te softverska obrada prioriteta u glavnoj petlji programa.</p>
+<h1><a class="anchor" id="system_opis"></a>
+Opis sustava</h1>
+<p>Sustav uključuje:</p>
+<p>tri tipkala s različitim prioritetima (HIGH, MID, LOW)</p>
+<p>periodički timer prekid</p>
+<p>senzor pokreta (PIR)</p>
+<p>LED indikatore za vizualizaciju rada</p>
+<p>Prekidi postavljaju zastavice koje se kasnije obrađuju u glavnoj petlji.</p>
+<h1><a class="anchor" id="interrupts"></a>
+Prekidi</h1>
+<h2><a class="anchor" id="button_interrupts"></a>
+Tipkala</h2>
+<p>HIGH prioritet → BUTTON_INPUT0</p>
+<p>MID prioritet → BUTTON_INPUT1</p>
+<p>LOW prioritet → BUTTON_INPUT2</p>
+<p>Svaki prekid:</p>
+<p>koristi ISR funkciju</p>
+<p>implementira debounce mehanizam</p>
+<p>postavlja odgovarajuću zastavicu</p>
+<h2><a class="anchor" id="timer_interrupt"></a>
+Timer</h2>
+<p>Timer generira periodički prekid svakih definirani interval. ISR funkcija postavlja zastavicu za obradu senzora.</p>
+<h2><a class="anchor" id="sensor"></a>
+Obrada senzora</h2>
+<p>Senzor se očitava nakon timer prekida, čime se izbjegava blokiranje ISR funkcije.</p>
+<h1><a class="anchor" id="priority"></a>
+Prioriteti prekida</h1>
+<p>Prioriteti su implementirani softverski u funkciji <a class="el" href="d1/dd7/lab1_8ino.html#ac5c5aa6ac9677fce5ac2020e921bd47b" title="Obrada prekida prema prioritetu.">handleInterrupts()</a>:</p>
+<p>HIGH MID LOW</p>
+<p>Koristi se else-if struktura kako bi se osiguralo da se obrađuje samo jedan prekid u jednom ciklusu.</p>
+<h1><a class="anchor" id="resource"></a>
+Upravljanje resursima</h1>
+<p>ISR funkcije su minimalne (postavljaju samo zastavice)</p>
+<p>koristi se volatile za dijeljene varijable</p>
+<p>interruptInProgress sprječava konflikte</p>
+<p>izbjegavaju se duge operacije unutar ISR-a</p>
+<h1><a class="anchor" id="main"></a>
+Main program</h1>
+<h1><a class="anchor" id="timer"></a>
+Timer ISR</h1>
+<h1><a class="anchor" id="led"></a>
+Led Prioriteti ISR</h1>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,5 +1,0 @@
-<map id="LOW_INTERRUPT" name="LOW_INTERRUPT">
-<area shape="rect" id="Node000001" title="ISR za tipkalo niskog prioriteta." alt="" coords="5,5,139,31"/>
-<area shape="rect" id="Node000002" href="$d1/dd7/lab1_8ino.html#a4c96831ab3c332483a603f129028f35c" title="Obrada prekida (zajednička funkcija)" alt="" coords="187,5,309,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,15,173,15,173,21,139,21"/>
-</map>
