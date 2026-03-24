@@ -1,0 +1,15 @@
+<map id="setup" name="setup">
+<area shape="rect" id="Node000001" title="Inicijalizacija sustava." alt="" coords="5,80,64,105"/>
+<area shape="rect" id="Node000002" href="$d1/dd7/lab1_8ino.html#a6bc539e830ae5b768f36f85c67336e8b" title="ISR za tipkalo visokog prioriteta." alt="" coords="112,5,249,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,77,111,40,125,33,127,38,113,44,54,82"/>
+<area shape="rect" id="Node000004" href="$d1/dd7/lab1_8ino.html#a1bd1505bf87e70f03f2a5466f66d31cd" title="ISR za tipkalo niskog prioriteta." alt="" coords="114,55,247,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="64,85,100,79,101,84,65,90"/>
+<area shape="rect" id="Node000005" href="$d1/dd7/lab1_8ino.html#a219aa6710896515bec32b78ec7983b48" title="ISR za tipkalo srednjeg prioriteta." alt="" coords="116,104,245,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="65,95,102,101,102,106,64,100"/>
+<area shape="rect" id="Node000006" href="$d1/dd7/lab1_8ino.html#ada06ab1c4bbd307a9fea75726c8894f1" title="Timer ISR." alt="" coords="143,153,219,179"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="56,103,113,138,131,146,129,151,111,143,53,108"/>
+<area shape="rect" id="Node000003" href="$d1/dd7/lab1_8ino.html#a4c96831ab3c332483a603f129028f35c" title="Obrada prekida (zajednička funkcija)" alt="" coords="297,55,420,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,28,299,48,298,53,226,33"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="248,65,283,65,283,70,248,70"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="226,101,298,81,299,86,228,107"/>
+</map>
