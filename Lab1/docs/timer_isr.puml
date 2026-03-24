@@ -1,0 +1,23 @@
+@startuml
+title Timer i obrada senzora
+
+start
+
+:onTimer ISR;
+:timerFlag = true;
+
+if (timerFlag?) then (yes)
+  :handleSensorUpdate();
+  :read SENSOR_INPUT;
+
+  if (motion detected?) then (yes)
+    :Serial "Motion";
+  else (no)
+    :no output;
+  endif
+
+  :timerFlag = false;
+endif
+
+stop
+@enduml

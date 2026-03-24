@@ -1,0 +1,28 @@
+@startuml
+title Obrada prekida i LED indikacija
+
+start
+
+:handleInterrupts();
+:interruptInProgress = true;
+
+if (actionFlag[0]?) then (HIGH)
+  :blink LED_CHECK1;
+  :reset flag 0;
+
+elseif (actionFlag[1]?) then (MID)
+  :blink LED_CHECK2;
+  :reset flag 1;
+
+elseif (actionFlag[2]?) then (LOW)
+  :blink LED_CHECK3;
+  :reset flag 2;
+
+else (none)
+  :no interrupt;
+endif
+
+:interruptInProgress = false;
+
+stop
+@enduml

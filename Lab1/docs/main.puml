@@ -1,0 +1,45 @@
+@startuml
+title Glavni program i ISR tok
+
+start
+
+:loop();
+
+fork
+
+  :HIGH_INTERRUPT ISR;
+  if (!interruptInProgress?) then (yes)
+    :handleInterrupt(0);
+  endif
+
+fork again
+
+  :MID_INTERRUPT ISR;
+  if (!interruptInProgress?) then (yes)
+    :handleInterrupt(1);
+  endif
+
+fork again
+
+  :LOW_INTERRUPT ISR;
+  if (!interruptInProgress?) then (yes)
+    :handleInterrupt(2);
+  endif
+
+end fork
+
+:loop nastavlja;
+
+if (timerFlag?) then (yes)
+  :handleSensorUpdate();
+endif
+
+:handleInterrupts();
+
+if (!interruptInProgress?) then (idle)
+  :blink LED_CHECK0;
+  :Serial "Idle";
+endif
+
+stop
+@enduml

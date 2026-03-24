@@ -60,6 +60,8 @@ DOT_PATH               = /usr/bin/dot                # Putanja do `dot` programa
 DOT_NUM_THREADS        = 2                           # Paralelno generiranje dijagrama
 DOT_FONTNAME           = Helvetica                   # Font u dijagramima
 DOT_FONTSIZE           = 10                          # Veličina fonta
+PLANTUML_JAR_PATH      = /usr/share/plantuml/plantuml.jar
+PLANTUML_INCLUDE_PATH  = docs
 
 CLASS_DIAGRAMS         = YES                         # Prikaži dijagrame struktura
 CALL_GRAPH             = YES                         # Dijagram toka funkcijskih poziva
