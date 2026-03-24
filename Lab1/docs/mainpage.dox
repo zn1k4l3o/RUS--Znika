@@ -1,0 +1,167 @@
+/**
+
+@mainpage Lab1 – Prekidi u ugradbenim sustavima
+
+@section intro Uvod
+Ovaj projekt demonstrira rad s višestrukim prekidima na mikrokontroleru.
+Implementirani su različiti izvori prekida (tipkala, timer i senzor) te
+softverska obrada prioriteta u glavnoj petlji programa.
+
+@section system_opis Opis sustava
+Sustav uključuje:
+
+tri tipkala s različitim prioritetima (HIGH, MID, LOW)
+
+periodički timer prekid
+
+senzor pokreta (PIR)
+
+LED indikatore za vizualizaciju rada
+
+Prekidi postavljaju zastavice koje se kasnije obrađuju u glavnoj petlji.
+
+@section interrupts Prekidi
+
+@subsection button_interrupts Tipkala
+
+HIGH prioritet → BUTTON_INPUT0
+
+MID prioritet → BUTTON_INPUT1
+
+LOW prioritet → BUTTON_INPUT2
+
+Svaki prekid:
+
+koristi ISR funkciju
+
+implementira debounce mehanizam
+
+postavlja odgovarajuću zastavicu
+
+@subsection timer_interrupt Timer
+Timer generira periodički prekid svakih definirani interval.
+ISR funkcija postavlja zastavicu za obradu senzora.
+
+@subsection sensor Obrada senzora
+Senzor se očitava nakon timer prekida, čime se izbjegava blokiranje ISR funkcije.
+
+@section priority Prioriteti prekida
+
+Prioriteti su implementirani softverski u funkciji handleInterrupts():
+
+HIGH
+MID
+LOW
+
+Koristi se else-if struktura kako bi se osiguralo da se obrađuje samo jedan prekid u jednom ciklusu.
+
+@section resource Upravljanje resursima
+
+ISR funkcije su minimalne (postavljaju samo zastavice)
+
+koristi se volatile za dijeljene varijable
+
+interruptInProgress sprječava konflikte
+
+izbjegavaju se duge operacije unutar ISR-a
+
+@section main Main program
+
+@startuml
+title Glavni program i ISR tok
+
+start
+
+:loop();
+
+fork
+
+  :HIGH_INTERRUPT ISR;
+  if (!interruptInProgress?) then (yes)
+    :handleInterrupt(0);
+  endif
+
+fork again
+
+  :MID_INTERRUPT ISR;
+  if (!interruptInProgress?) then (yes)
+    :handleInterrupt(1);
+  endif
+
+fork again
+
+  :LOW_INTERRUPT ISR;
+  if (!interruptInProgress?) then (yes)
+    :handleInterrupt(2);
+  endif
+
+end fork
+
+:loop nastavlja;
+
+if (timerFlag?) then (yes)
+  :handleSensorUpdate();
+endif
+
+:handleInterrupts();
+
+if (!interruptInProgress?) then (idle)
+  :blink LED_CHECK0;
+  :Serial "Idle";
+endif
+
+stop
+@enduml
+
+@section timer Timer ISR
+
+@startuml
+title Timer i obrada senzora
+
+start
+
+:onTimer ISR;
+:timerFlag = true;
+
+if (timerFlag?) then (yes)
+  :handleSensorUpdate();
+  :read SENSOR_INPUT;
+
+  if (motion detected?) then (yes)
+    :Serial "Motion";
+  else (no)
+    :no output;
+  endif
+
+  :timerFlag = false;
+endif
+
+stop
+@enduml
+
+@section led Led Prioriteti ISR
+
+@startuml
+title Timer i obrada senzora
+
+start
+
+:onTimer ISR;
+:timerFlag = true;
+
+if (timerFlag?) then (yes)
+  :handleSensorUpdate();
+  :read SENSOR_INPUT;
+
+  if (motion detected?) then (yes)
+    :Serial "Motion";
+  else (no)
+    :no output;
+  endif
+
+  :timerFlag = false;
+endif
+
+stop
+@enduml
+*/

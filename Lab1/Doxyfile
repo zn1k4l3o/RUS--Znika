@@ -20,9 +20,9 @@ USE_MDFILE_AS_MAINPAGE = README.md                   # Koristi README.md kao po�
 #-----------------------------------------------------------------------------
 # Izvorne datoteke
 #-----------------------------------------------------------------------------
-INPUT                  = .                           # Traži u trenutnom direktoriju
+INPUT                  = .  docs/mainpage.dox        # Traži u trenutnom direktoriju
 RECURSIVE              = YES                         # Uključi sve poddirektorije
-FILE_PATTERNS          = *.c *.h *.ino               # Priznate ekstenzije (uključuju Arduino .ino)
+FILE_PATTERNS          = *.c *.h *.ino *.dox          # Priznate ekstenzije (uključuju Arduino .ino)
 EXTENSION_MAPPING      = ino=c                       # Mapiraj .ino kao C datoteke (sintaksno)
 
 #-----------------------------------------------------------------------------
@@ -55,13 +55,14 @@ OPTIMIZE_OUTPUT_FOR_C  = YES                         # Stil prikaza prilagođen 
 #-----------------------------------------------------------------------------
 # Dijagrami i grafički prikazi (Graphviz/DOT)
 #-----------------------------------------------------------------------------
-HAVE_DOT               = YES                         # Omogući korištenje Graphviz alata
+HAVE_DOT               = NO                          # Omogući korištenje Graphviz alata
 DOT_PATH               = /usr/bin/dot                # Putanja do `dot` programa (ovisno o sustavu)
 DOT_NUM_THREADS        = 2                           # Paralelno generiranje dijagrama
 DOT_FONTNAME           = Helvetica                   # Font u dijagramima
 DOT_FONTSIZE           = 10                          # Veličina fonta
-PLANTUML_JAR_PATH      = /usr/share/plantuml/plantuml.jar
+PLANTUML_JAR_PATH      = 
 PLANTUML_INCLUDE_PATH  = docs
+PLANTUML_SERVER        = http://www.plantuml.com/plantuml
 
 CLASS_DIAGRAMS         = YES                         # Prikaži dijagrame struktura
 CALL_GRAPH             = YES                         # Dijagram toka funkcijskih poziva
