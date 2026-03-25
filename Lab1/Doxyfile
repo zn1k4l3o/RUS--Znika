@@ -55,12 +55,12 @@ OPTIMIZE_OUTPUT_FOR_C  = YES                         # Stil prikaza prilagođen 
 #-----------------------------------------------------------------------------
 # Dijagrami i grafički prikazi (Graphviz/DOT)
 #-----------------------------------------------------------------------------
-HAVE_DOT               = NO                          # Omogući korištenje Graphviz alata
+HAVE_DOT               = YES                         # Omogući korištenje Graphviz alata
 DOT_PATH               = /usr/bin/dot                # Putanja do `dot` programa (ovisno o sustavu)
 DOT_NUM_THREADS        = 2                           # Paralelno generiranje dijagrama
 DOT_FONTNAME           = Helvetica                   # Font u dijagramima
 DOT_FONTSIZE           = 10                          # Veličina fonta
-PLANTUML_JAR_PATH      = 
+PLANTUML_JAR_PATH      = /usr/bin/plantuml
 PLANTUML_INCLUDE_PATH  = docs
 PLANTUML_SERVER        = http://www.plantuml.com/plantuml
 
