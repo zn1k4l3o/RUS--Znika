@@ -1,0 +1,115 @@
+ESP-ROM:esp32s2-rc4-20191025
+Build:Oct 25 2019
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0xffffffff
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3ffe6100,len:0x468
+load:0x4004c000,len:0x7e0
+load:0x40050000,len:0x2140
+entry 0x4004c168
+Initializing sensors...
+
+=== WAKEUP EVENT ===
+Normal startup
+
+=== ACTIVE MODE ===
+Temperature: 24.00 C
+Humidity: 40.00 %
+Distance: 34.00 cm
+Stored measurements: 1
+
+Preparing LIGHT SLEEP...
+Entering LIGHT SLEEP...
+
+=== ACTIVE MODE ===
+Temperature: 24.00 C
+Humidity: 40.00 %
+Distance: 33.97 cm
+Stored measurements: 2
+
+Preparing LIGHT SLEEP...
+Entering LIGHT SLEEP...
+
+=== ACTIVE MODE ===
+Temperature: 24.00 C
+Humidity: 40.00 %
+Distance: 33.98 cm
+Stored measurements: 3
+
+Preparing LIGHT SLEEP...
+Entering LIGHT SLEEP...
+
+=== ACTIVE MODE ===
+Temperature: 24.00 C
+Humidity: 40.00 %
+Distance: 178.94 cm
+Stored measurements: 4
+
+Preparing LIGHT SLEEP...
+Entering LIGHT SLEEP...
+
+=== ACTIVE MODE ===
+Temperature: 1.20 C
+Humidity: 54.00 %
+Distance: 179.03 cm
+Stored measurements: 5
+
+Preparing LIGHT SLEEP...
+Entering LIGHT SLEEP...
+
+=== ACTIVE MODE ===
+Temperature: 1.20 C
+Humidity: 54.00 %
+Distance: 178.98 cm
+Stored measurements: 6
+
+Preparing LIGHT SLEEP...
+Entering LIGHT SLEEP...
+
+=== ACTIVE MODE ===
+Temperature: 55.40 C
+Humidity: 54.00 %
+Distance: 178.96 cm
+Stored measurements: 7
+
+Preparing LIGHT SLEEP...
+Entering LIGHT SLEEP...
+
+=== ACTIVE MODE ===
+Temperature: 55.40 C
+Humidity: 100.00 %
+Distance: 309.94 cm
+Stored measurements: 8
+
+Preparing LIGHT SLEEP...
+Entering LIGHT SLEEP...
+
+=== ACTIVE MODE ===
+Temperature: 55.40 C
+Humidity: 100.00 %
+Distance: 309.94 cm
+Stored measurements: 9
+
+Preparing LIGHT SLEEP...
+Entering LIGHT SLEEP...
+
+=== ACTIVE MODE ===
+Temperature: 55.40 C
+Humidity: 100.00 %
+Distance: 309.94 cm
+Stored measurements: 10
+
+ STORED ENVIRONMENT DATA
+Measurement 1 | Temp: 24.00 C | Humidity: 40.00 % | Distance: 34.00 cm
+Measurement 2 | Temp: 24.00 C | Humidity: 40.00 % | Distance: 33.97 cm
+Measurement 3 | Temp: 24.00 C | Humidity: 40.00 % | Distance: 33.98 cm
+Measurement 4 | Temp: 24.00 C | Humidity: 40.00 % | Distance: 178.94 cm
+Measurement 5 | Temp: 1.20 C | Humidity: 54.00 % | Distance: 179.03 cm
+Measurement 6 | Temp: 1.20 C | Humidity: 54.00 % | Distance: 178.98 cm
+Measurement 7 | Temp: 55.40 C | Humidity: 54.00 % | Distance: 178.96 cm
+Measurement 8 | Temp: 55.40 C | Humidity: 100.00 % | Distance: 309.94 cm
+Measurement 9 | Temp: 55.40 C | Humidity: 100.00 % | Distance: 309.94 cm
+Measurement 10 | Temp: 55.40 C | Humidity: 100.00 % | Distance: 309.94 cm
+================================
+Storage reset.
